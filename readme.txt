@@ -36,7 +36,3 @@ file-opening, handling the graph initialization for any other than 0-indexed ori
 perfectly.
 
 Compilation: gcc (both files ./djikstra.c ./vector_int.c -o main)
-
-Author: Andron Osipov
-
-Thank you!
