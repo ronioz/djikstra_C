@@ -50,9 +50,14 @@ Test graph inputs.
 
 #### `Visual Representations of the given graphs`
 
-![Graph1](graph_pics/graph1.png)
-![Graph2](graph_pics/graph2.png)
-![Graph3](graph_pics/graph3.png)
+<p><b>Graph1</b></p>
+<img src="images/graph1.png" width="300">
+
+<p><b>Graph2</b></p>
+<img src="images/graph2.png" width="300">
+
+<p><b>Graph3</b></p>
+<img src="images/graph3.png" width="300">
 
 ---
 
