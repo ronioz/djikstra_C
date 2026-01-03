@@ -52,3 +52,40 @@ Test graph inputs.
 
 ## 📄 Input Format
 
+n m
+v1 u1 w1
+v2 u2 w2
+...
+vm um wm
+
+Where:
+- `n` – number of vertices
+- `m` – number of edges
+- `(v, u, w)` – edge from vertex `v` to vertex `u` with weight `w`
+
+---
+
+## ⚠️ Limitations & Assumptions
+
+- No error checking for:
+  - `malloc`, `calloc`, `realloc`
+  - file opening failures
+- Assumes:
+  - Graph is 0-indexed
+  - Graph is directed unless edges are explicitly duplicated
+- Designed for **educational purposes**, not production use
+
+Despite these limitations, the **core Dijkstra algorithm is implemented correctly**.
+
+---
+
+## 🛠️ Compilation
+
+Compile using `gcc`:
+
+```bash
+gcc djikstra.c vector_int.c -o main
+
+Run:
+
+./main
