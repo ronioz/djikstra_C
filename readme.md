@@ -48,6 +48,12 @@ Test graph inputs.
   (edges are explicitly given as both `(u, v, w)` and `(v, u, w)`)
 - `graph3.txt` – directed graph
 
+#### `Visual Representations of the given graphs`
+
+![Graph1](graph_pics/graph1.png)
+![Graph2](graph_pics/graph2.png)
+![Graph3](graph_pics/graph3.png)
+
 ---
 
 ## Input Format
