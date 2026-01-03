@@ -50,7 +50,7 @@ Test graph inputs.
 
 ---
 
-## 📄 Input Format
+## Input Format
 
 n m
 
