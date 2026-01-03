@@ -8,7 +8,7 @@ In order to mimic `std::vector<int>` from C++, a **custom dynamic array implemen
 
 ---
 
-## 📁 Project Structure
+## Project Structure
 ├── djikstra.c
 ├── vector_int.h
 ├── vector_int.c
@@ -69,7 +69,7 @@ Where:
 
 ---
 
-## ⚠️ Limitations & Assumptions
+## Limitations & Assumptions
 
 - No error checking for:
   - `malloc`, `calloc`, `realloc`
@@ -83,7 +83,7 @@ Despite these limitations, the **core Dijkstra algorithm is implemented correctl
 
 ---
 
-## 🛠️ Compilation
+## Compilation
 
 Compile using `gcc`:
 
