@@ -53,9 +53,13 @@ Test graph inputs.
 ## 📄 Input Format
 
 n m
+
 v1 u1 w1
+
 v2 u2 w2
+
 ...
+
 vm um wm
 
 Where:
