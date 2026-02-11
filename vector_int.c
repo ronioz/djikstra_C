@@ -3,12 +3,17 @@
 #include <stdlib.h>
 
 void init_vector(vectorInt* v){
-    v->data = NULL;
+    v->capacity = 4;
+    v->data = malloc(v->capacity*sizeof(int));
     v->size = 0;
 } //creating a vector
 
 void push_back(vectorInt* v, int value){
-    v->data = realloc(v->data, (v->size+1)*sizeof(int));
+    if(v->size == v->capacity){
+        v->capacity *= 2;
+        v->data = realloc(v->data, (v->capacity)*sizeof(int));
+    }
+
     v->data[v->size] = value; 
     v->size++;
 } //in C++ the vector has many functions, but here I only need push_back. Dynamically adding an element in the tail of the array

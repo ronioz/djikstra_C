@@ -1,7 +1,8 @@
 #include "vector_int.h"
+#include "priority_queue.h"
 #include <stdio.h>
 #include <stdlib.h>
-#define INT_MAX 100000000 //using it in the dist array
+#include "limits.h"
 
 vectorInt* weights;
 vectorInt* neighbours;
@@ -75,30 +76,32 @@ int main(){
         addEdge(u, v, w);
     } //input and initializing graph (in this case oriented graph (one-way edges only))
 
-    for(int i = 0; i < n; i++){
-        int u = -1;
-        int min_dist = INT_MAX;
-        
-        for(int j = 0; j < n; j++){
-            if(!visited[j] && dist[j] < min_dist){
-                u = j;
-                min_dist = dist[j];
-            }
-        } //looking up for the closest vertic to the root out of all nodes which are NOT visited
+    PriorityQueue pq;
+    pq_init(&pq, n);
+    pq_push(&pq, 0, root);
 
-        if(u == -1) break; //if all nodes visited then break, the algorithm is finished
-        visited[u] = 1;
+    while(!pq_empty(&pq)){
+        PQNode top = pq_top(&pq);
+        pq_pop(&pq);
 
-        for(int j = 0; j < neighbours[u].size; j++){
-            int v = neighbours[u].data[j];
-            int w = weights[u].data[j];
+        int u = top.node;
+        int d = top.dist;
 
-            if(!visited[v] && dist[u] + w < dist[v]){
+        if(d > dist[u])
+            continue; //pruning
+
+        for(int i = 0; i < neighbours[u].size; i++){
+            int v = neighbours[u].data[i];
+            int w = weights[u].data[i];
+
+            if(dist[u] + w < dist[v]){
                 dist[v] = dist[u] + w;
+                pq_push(&pq, dist[v], v);
             }
-        } //iterating every neighbour, and minimizing the distance
-
+        }
     }
+
+    pq_free(&pq);
 
     for(int i = 0; i < n; i++){
         printf("Vertex: %d, Distance from (%d): ", i, root);

@@ -2,6 +2,7 @@
 #define VECTOR_INT_H
 
 typedef struct {
+    int capacity;
     int* data;
     int size;
 } vectorInt; //defining vectorInt (equivalent to vector<int> in cpp)
