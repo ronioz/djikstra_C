@@ -1,4 +1,3 @@
-```markdown
 # Dijkstra Shortest Path (C Implementation)
 
 This project implements **Dijkstra's algorithm** to find the shortest paths from a **single source vertex** to **all other vertices** in a **weighted, directed graph**.
@@ -114,9 +113,3 @@ gcc djikstra.c vector_int.c priority_queue.c -o main
 ```bash
 ./main
 # On Windows: main.exe
-
-```
-
-```
-
-```
