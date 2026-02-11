@@ -1,5 +1,3 @@
-Here is the fully updated `README.md` file. You can copy and paste this directly.
-
 ```markdown
 # Dijkstra Shortest Path (C Implementation)
 
